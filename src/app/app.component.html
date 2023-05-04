@@ -11,10 +11,10 @@
             {{ server.status }}
           </span>
           <strong>
-            {{ server.name }}
+            {{ server.name | shorten:10 }}
           </strong> |
           {{ server.instanceType | uppercase }} |
-          {{ server.started | date:'fullDate' }}
+          {{ server.started | date:'fullDate' | uppercase }}
         </li>
       </ul>
     </div>
